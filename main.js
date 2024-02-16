@@ -48,3 +48,13 @@ document.getElementById('pen-calculate-btn').addEventListener('click', function(
     const area = 0.5 * pentagon * apothem;
     resultDisplay.innerText = "Area is: "+ area + " m2";
 });
+//ellipse
+document.getElementById('ellip-calculate-btn').addEventListener('click', function(){
+    const ellipseAInput = document.getElementById('ellipse-a-input').value;
+    const ellipseBInput = document.getElementById('ellipse-b-input').value;
+    const resultDisplay = document.getElementById('ellip-result-display');
+    const ellipseA = parseFloat(ellipseAInput);
+    const ellipseB = parseFloat(ellipseBInput);
+    const area = 3.1416 * ellipseA * ellipseB;
+    resultDisplay.innerText = "Area is: "+ area + " m2";
+});
