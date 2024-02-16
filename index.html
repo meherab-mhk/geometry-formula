@@ -16,14 +16,15 @@
                 <div class="card-body">
                   <h2 class="card-title">Triangle</h2>
                   <p class="">Area (A) = 0.5 x b x h</p>
+                  <p id="result-display"></p>
                   <div class="flex flex-row gap-3 items-center">
-                    <input type="text" class="w-[100px] py-3" placeholder="b">
+                    <input id="tri-base-input" type="text" class="w-[100px] py-3" placeholder="b">
                     <span>cm</span>
-                    <input type="text" class="w-[100px] py-3" placeholder="h">
+                    <input id="tri-height-input" type="text" class="w-[100px] py-3" placeholder="h">
                     <span>cm</span>
                   </div>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary w-full">Calculate</button>
+                    <button id="calculate-btn" class="btn btn-primary w-full">Calculate</button>
                   </div>
                 </div>
             </div>
@@ -114,5 +115,6 @@
             </div>
         </section>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
