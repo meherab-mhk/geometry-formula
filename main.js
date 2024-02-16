@@ -1,60 +1,71 @@
+function getInputValue(input) {
+    const inputValue = document.getElementById(input).value;
+    const value  = parseFloat(inputValue);
+    return value;
+}
+function getArea(input1, input2){
+    const result = 0.5 * input1 * input2;
+    return result;
+}
+function getArea2(input1, input2){
+    const result = input1 * input2;
+    return result;
+}
+function setDisplay(){
+    const setDisplay = document.getElementById('result-display');
+    return setDisplay;
+}
+
 //triangle
-document.getElementById('calculate-btn').addEventListener('click', function(){
-    const triBaseInput = document.getElementById('tri-base-input').value;
-    const triHeightInput = document.getElementById('tri-height-input').value;
-    const resultDisplay = document.getElementById('result-display');
-    const triangleBase = parseFloat(triBaseInput);
-    const triangleHeight = parseFloat(triHeightInput);
-    const area = 0.5 * triangleBase * triangleHeight;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculateTriangleArea() {
+    const base = getInputValue('tri-base-input');
+    const height = getInputValue('tri-height-input');
+    const result = getArea(base, height);
+    const showResult = setDisplay();
+    showResult.innerText = "Triangle area is: " + result + " cm2";
+}
+
 //rectangle
-document.getElementById('rect-calculate-btn').addEventListener('click', function(){
-    const rectWidthInput = document.getElementById('rect-width-input').value;
-    const rectLengthInput = document.getElementById('rect-length-input').value;
-    const resultDisplay = document.getElementById('rect-result-display');
-    const rectWidth = parseFloat(rectWidthInput);
-    const rectlength = parseFloat(rectLengthInput);
-    const area = rectWidth * rectlength;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculateRectangleArea() {
+    const width = getInputValue('rect-width-input');
+    const length = getInputValue('rect-length-input');
+    const result = getArea2(width, length);
+    const showResult = setDisplay();
+    showResult.innerText = "Rectangle area is: " + result + " cm2";
+}
+
 //parallelogram
-document.getElementById('para-calculate-btn').addEventListener('click', function(){
-    const paraBaseInput = document.getElementById('para-base-input').value;
-    const paraHeightInput = document.getElementById('para-height-input').value;
-    const resultDisplay = document.getElementById('para-result-display');
-    const parallelogramBase = parseFloat(paraBaseInput);
-    const parallelogramHeight = parseFloat(paraHeightInput);
-    const area = parallelogramBase * parallelogramHeight;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculateParalellogramArea() {
+    const base = getInputValue('para-base-input');
+    const height = getInputValue('para-height-input');
+    const result = getArea2(base, height);
+    const showResult = setDisplay();
+    showResult.innerText = "Paralellogram area is: " + result + " cm2";
+}
+
 //rhombus
-document.getElementById('rhom-calculate-btn').addEventListener('click', function(){
-    const rhomDiagonal1Input = document.getElementById('rhom-diagonal1-input').value;
-    const rhomDiagonal2Input = document.getElementById('rhom-diagonal2-input').value;
-    const resultDisplay = document.getElementById('rhom-result-display');
-    const rhombusDiagonal1 = parseFloat(rhomDiagonal1Input);
-    const rhombusDiagonal2 = parseFloat(rhomDiagonal2Input);
-    const area = 0.5 * rhombusDiagonal1 * rhombusDiagonal2;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculateRhombusArea(){
+    const diagonal1 = getInputValue('rhom-diagonal1-input');
+    const diagonal2 = getInputValue('rhom-diagonal2-input');
+    const result = getArea(diagonal1, diagonal2);
+    const showResult = setDisplay();
+    showResult.innerText = "Rhombus area is: " + result + " cm2";
+}
+
 //pentagon
-document.getElementById('pen-calculate-btn').addEventListener('click', function(){
-    const pentagonInput = document.getElementById('pentagon-input').value;
-    const apothemInput = document.getElementById('apothem-input').value;
-    const resultDisplay = document.getElementById('pen-result-display');
-    const pentagon = parseFloat(pentagonInput);
-    const apothem = parseFloat(apothemInput);
-    const area = 0.5 * pentagon * apothem;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculatePentagonArea() {
+    const pentagon = getInputValue('pentagon-input');
+    const apothem = getInputValue('apothem-input');
+    const result = getArea(pentagon, apothem);
+    const showResult = setDisplay();
+    showResult.innerText = "Pentagon area is: " + result + " cm2";
+}
+
 //ellipse
-document.getElementById('ellip-calculate-btn').addEventListener('click', function(){
-    const ellipseAInput = document.getElementById('ellipse-a-input').value;
-    const ellipseBInput = document.getElementById('ellipse-b-input').value;
-    const resultDisplay = document.getElementById('ellip-result-display');
-    const ellipseA = parseFloat(ellipseAInput);
-    const ellipseB = parseFloat(ellipseBInput);
-    const area = 3.1416 * ellipseA * ellipseB;
-    resultDisplay.innerText = "Area is: "+ area + " m2";
-});
+function calculateEllipseArea(){
+    const ellipseAInput = getInputValue('ellipse-a-input');
+    const ellipseBInput = getInputValue('ellipse-b-input');
+    const result = 3.1416 * ellipseAInput * ellipseBInput;
+    const showResult = setDisplay();
+    showResult.innerText = "Ellipse area is: " + result + " cm2";
+}

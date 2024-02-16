@@ -9,122 +9,122 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main class="m-10 flex flex-col md:flex-row gap-6">
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <main class="w-[1440px] mx-auto">
+        <section class="my-10 flex flex-col md:flex-row gap-5">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/triangle.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Triangle</h2>
-                  <p class="">Area (A) = 0.5 x b x h</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="tri-base-input" type="text" class="w-[100px] py-3" placeholder="b">
-                    <span>cm</span>
-                    <input id="tri-height-input" type="text" class="w-[100px] py-3" placeholder="h">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/triangle.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Triangle</h2>
+                <p class="">Area (A) = 0.5 x b x h</p>
+                
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="tri-base-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="b">
+                  <span>cm</span>
+                  <input id="tri-height-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="h">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="calculate-btn" class="btn btn-primary w-full" onclick="calculateTriangleArea()">Calculate</button>
+                </div>
+              </div>
             </div>
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/rectangle.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Rectangle</h2>
-                  <p class="">Area (A) = w x l</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="rect-width-input" type="text" class="w-[100px] py-3" placeholder="w">
-                    <span>cm</span>
-                    <input id="rect-length-input" type="text" class="w-[100px] py-3" placeholder="l">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="rect-calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/rectangle.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Rectangle</h2>
+                <p class="">Area (A) = w x l</p>
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="rect-width-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="w">
+                  <span>cm</span>
+                  <input id="rect-length-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="l">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="rect-calculate-btn" class="btn btn-primary w-full" onclick="calculateRectangleArea()">Calculate</button>
+                </div>
+              </div>
             </div>
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/parallelogram.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Parallelogram</h2>
-                  <p class="">Area (A) = b x h</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="para-base-input" type="text" class="w-[100px] py-3" placeholder="b">
-                    <span>cm</span>
-                    <input id="para-height-input" type="text" class="w-[100px] py-3" placeholder="h">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="para-calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/parallelogram.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Parallelogram</h2>
+                <p class="">Area (A) = b x h</p>
+                
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="para-base-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="b">
+                  <span>cm</span>
+                  <input id="para-height-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="h">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="para-calculate-btn" class="btn btn-primary w-full" onclick="calculateParalellogramArea()">Calculate</button>
+                </div>
+              </div>
             </div>
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/rhombus.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Rhombus</h2>
-                  <p class="">Area (A) = 0.5 x d1 x d2</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="rhom-diagonal1-input" type="text" class="w-[100px] py-3" placeholder="d1">
-                    <span>cm</span>
-                    <input id="rhom-diagonal2-input" type="text" class="w-[100px] py-3" placeholder="d2">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="rhom-calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/rhombus.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Rhombus</h2>
+                <p class="">Area (A) = 0.5 x d1 x d2</p>
+                
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="rhom-diagonal1-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="d1">
+                  <span>cm</span>
+                  <input id="rhom-diagonal2-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="d2">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="rhom-calculate-btn" class="btn btn-primary w-full" onclick="calculateRhombusArea()">Calculate</button>
+                </div>
+              </div>
             </div>
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/pentagon.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Pentagon</h2>
-                  <p class="">Area (A) = 0.5 x p x b</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="pentagon-input" type="text" class="w-[100px] py-3" placeholder="p">
-                    <span>cm</span>
-                    <input id="apothem-input" type="text" class="w-[100px] py-3" placeholder="b">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="pen-calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/pentagon.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Pentagon</h2>
+                <p class="">Area (A) = 0.5 x p x b</p>
+                
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="pentagon-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500"" placeholder="p">
+                  <span>cm</span>
+                  <input id="apothem-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="b">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="pen-calculate-btn" class="btn btn-primary w-full" onclick="calculatePentagonArea()">Calculate</button>
+                </div>
+              </div>
             </div>
             <div class="card card-compact w-96 bg-base-100 shadow-xl col-span-1">
-                <figure><img src="images/ellipse.png" alt="" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Ellipse</h2>
-                  <p class="">Area (A) = pi x ab</p>
-                  
-                  <div class="flex flex-row gap-3 items-center">
-                    <input id="ellipse-a-input" type="text" class="w-[100px] py-3" placeholder="a">
-                    <span>cm</span>
-                    <input id="ellipse-b-input" type="text" class="w-[100px] py-3" placeholder="b">
-                    <span>cm</span>
-                  </div>
-                  <div class="card-actions justify-end">
-                    <button id="ellip-calculate-btn" class="btn btn-primary w-full">Calculate</button>
-                  </div>
+              <figure><img src="images/ellipse.png" alt="" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Ellipse</h2>
+                <p class="">Area (A) = pi x ab</p>
+                
+                <div class="flex flex-row gap-3 items-center">
+                  <input id="ellipse-a-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="a">
+                  <span>cm</span>
+                  <input id="ellipse-b-input" type="text" class="w-[100px] p-3 border-2 rounded-lg border-gray-500" placeholder="b">
+                  <span>cm</span>
                 </div>
+                <div class="card-actions justify-end">
+                  <button id="ellip-calculate-btn" class="btn btn-primary w-full" onclick="calculateEllipseArea()">Calculate</button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="border-2 rounded-2xl border-gray-600  px-6 py-2">
+            <h3 class="text-center px-10">Area Calculation</h3>
+            <p id="result-display"></p>
+        </div>
         </section>
-        <section class="">
-            <div class="border-2 rounded-2xl border-gray-600 w-[430px] h-full px-6">
+        <!-- <section class="">
+            <div class="border-2 rounded-2xl border-gray-600 h-full px-6 py-2">
                 <h3 class="text-center px-10">Area Calculation</h3>
                 <p id="result-display"></p>
-                <p id="rect-result-display"></p>
-                <p id="para-result-display"></p>
-                <p id="rhom-result-display"></p>
-                <p id="pen-result-display"></p>
-                <p id="ellip-result-display"></p>
             </div>
-        </section>
+        </section> -->
     </main>
     <script src="main.js"></script>
 </body>
