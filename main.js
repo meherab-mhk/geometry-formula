@@ -18,5 +18,14 @@ document.getElementById('rect-calculate-btn').addEventListener('click', function
     const area = rectWidth * rectlength;
     resultDisplay.innerText = "Area is: "+ area + " m2";
 });
-
+//parallelogram
+document.getElementById('para-calculate-btn').addEventListener('click', function(){
+    const paraBaseInput = document.getElementById('para-base-input').value;
+    const paraHeightInput = document.getElementById('para-height-input').value;
+    const resultDisplay = document.getElementById('para-result-display');
+    const parallelogramBase = parseFloat(paraBaseInput);
+    const parallelogramHeight = parseFloat(paraHeightInput);
+    const area = parallelogramBase * parallelogramHeight;
+    resultDisplay.innerText = "Area is: "+ area + " m2";
+});
 
