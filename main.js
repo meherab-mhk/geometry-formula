@@ -38,4 +38,13 @@ document.getElementById('rhom-calculate-btn').addEventListener('click', function
     const area = 0.5 * rhombusDiagonal1 * rhombusDiagonal2;
     resultDisplay.innerText = "Area is: "+ area + " m2";
 });
-
+//pentagon
+document.getElementById('pen-calculate-btn').addEventListener('click', function(){
+    const pentagonInput = document.getElementById('pentagon-input').value;
+    const apothemInput = document.getElementById('apothem-input').value;
+    const resultDisplay = document.getElementById('pen-result-display');
+    const pentagon = parseFloat(pentagonInput);
+    const apothem = parseFloat(apothemInput);
+    const area = 0.5 * pentagon * apothem;
+    resultDisplay.innerText = "Area is: "+ area + " m2";
+});
